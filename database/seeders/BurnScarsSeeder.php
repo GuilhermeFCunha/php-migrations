@@ -19,7 +19,7 @@ class BurnScarsSeeder extends Seeder
         foreach ($old_user as $user) {
             DB::connection('pgsql')->table('burn_scars')->insert([
                 'id'     => $user->id,
-                'process_id'      =>$user->process_id,
+                'process_id'    =>$user->process_id,
                 'area'      =>$user->area,
                 'year'      =>$user->year,
                 'geom'      =>$user->geom
