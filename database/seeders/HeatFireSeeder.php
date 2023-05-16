@@ -13,13 +13,16 @@ class HeatFireSeeder extends Seeder
      */
     public function run(): void
     {
-        $old_user = DB::connection('pgsql2')->table('camadas.foco_calor_2020')->get();
+        $old_user = DB::connection('pgsql2')->table('heat_fire')->get();
 
         // dd($old_user);
         foreach ($old_user as $user) {
             DB::connection('pgsql')->table('heat_fire')->insert([
                 'id'     => $user->id,
-                'year'      =>$user->ano
+                'process_id'      =>$user->process_id,
+                'total'      =>$user->total,
+                'year'      =>$user->year,
+                'geom'      =>$user->geom
             ]);
 }
     }

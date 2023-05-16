@@ -33,7 +33,12 @@ class CarSeeder extends Seeder
             foreach ($chunk as $user) {
                 $insertData[] = [
                     'id' => $user->id,
-                    'code'      =>$user->cod_imovel
+                    'code'=>$user->code,
+                    'area'=>$user->area,
+                    'status_id'=>$user->status_id,
+                    'state'=>$user->state,
+                    'city'=>$user->city,
+                    'city_ibge'=>$user->city_ibge
                 ];
 
                 if (count($insertData) === $batchSize) {
