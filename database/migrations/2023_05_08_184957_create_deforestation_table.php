@@ -19,6 +19,7 @@ return new class extends Migration
             $table->decimal('area', 10, 0)->nullable();
             $table->string('year', 4)->nullable();
             $table->geometry('geom')->nullable();
+            $table->string('source')->nullable();
         });
     }
 

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('state')->nullable();
             $table->string('city')->nullable();
             $table->integer('city_ibge')->nullable();
+            $table->geometry('geom')->nullable();
         });
     }
 
