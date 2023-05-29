@@ -20,7 +20,10 @@ class DatabaseSeeder extends Seeder
             LandUseClassificationSeeder::class,
             ProcessSeeder::class,
             RainHistorySeeder::class,
-            RestrictAreaSeeder::class
+            RestrictAreaSeeder::class,
+            RestrictAreaDocumentSeeder::class,
+            BiomesSeeder::class,
+            SoilsSeeder::class
         ]);
     }
 }
