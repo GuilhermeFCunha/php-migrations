@@ -22,7 +22,8 @@ return new class extends Migration
             $table->string('city')->nullable();
             $table->integer('city_ibge')->nullable();
             $table->geometry('geom')->nullable();
-            $table->string('zona', 2)->nullable();
+            $table->integer('zona')->nullable();
+            $table->integer('process_id')->nullable();
         });
     }
 
