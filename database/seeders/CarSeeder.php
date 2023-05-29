@@ -42,7 +42,7 @@ class CarSeeder extends Seeder
                     'mf'=>$user->mf,
                     'x'=>$user->x,
                     'y'=>$user->y,
-                    'zona'=>$user->zona,
+                    'zone'=>$user->zone,
                     'geom'=>$user->geom
                 ];
 

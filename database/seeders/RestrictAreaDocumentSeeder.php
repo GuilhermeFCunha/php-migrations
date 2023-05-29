@@ -19,17 +19,13 @@ class RestrictAreaSeeder extends Seeder
         foreach ($old_user as $user) {
             DB::connection('pgsql')->table('restrict_area')->insert([
                 'id'     => $user->id,
-                'process_id'      =>$user->process_id,
                 'name'      =>$user->name,
                 'document'      =>$user->document,
                 'process_t'      =>$user->process_t,
                 'status'      =>$user->status,
-                'area_overlap'      =>$user->area_overlap,
-                'area_total'      =>$user->area_total,
                 'year'      =>$user->year,
-                'source'      =>$user->source,
-                'description'      =>$user->description,
-                'geom'      =>$user->geom
+                'state'      =>$user->state,
+                'city'      =>$user->city
             ]);
 }
     }

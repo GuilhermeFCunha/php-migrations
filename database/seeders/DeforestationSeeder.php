@@ -37,8 +37,8 @@ class DeforestationSeeder extends Seeder
                     'area_overlap'=>$user->area_overlap,
                     'area_total'=>$user->area_total,
                     'year'=>$user->year,
-                    'geom'=>$user->geom,
-                    'source'=>$user->source
+                    'source'=>$user->source,
+                    'geom'=>$user->geom
                 ];
 
                 if (count($insertData) === $batchSize) {

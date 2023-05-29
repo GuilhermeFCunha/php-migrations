@@ -19,7 +19,6 @@ return new class extends Migration
             $table->foreign(['status_id'], 'car_status_id_fkey2')->references(['id'])->on('car_status');
             $table->foreign(['status_id'], 'car_status_id_fkey3')->references(['id'])->on('car_status');
             $table->foreign(['status_id'], 'car_status_id_fkey4')->references(['id'])->on('car_status');
-            $table->foreign(['process_id'], 'car_process_id_fkey')->references(['id'])->on('process');
         });
     }
 
@@ -37,7 +36,6 @@ return new class extends Migration
             $table->dropForeign('car_status_id_fkey2');
             $table->dropForeign('car_status_id_fkey3');
             $table->dropForeign('car_status_id_fkey4');
-            $table->dropForeign('car_process_id_fkey');
         });
     }
 };

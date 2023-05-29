@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('biomes', function (Blueprint $table) {
             $table->integer('id')->primary();
             $table->integer('process_id')->nullable();
-            $table->decimal('area', 10, 0)->nullable();
+            $table->decimal('area', 10, 2)->nullable();
             $table->string('biome')->nullable();
             $table->geometry('geom')->nullable();
         });

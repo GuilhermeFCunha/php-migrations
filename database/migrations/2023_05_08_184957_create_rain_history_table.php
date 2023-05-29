@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('rain_history', function (Blueprint $table) {
             $table->integer('id')->primary();
             $table->integer('process_id')->nullable();
-            $table->decimal('total', 10, 0)->nullable();
+            $table->decimal('total', 10, 2)->nullable();
             $table->string('year', 4)->nullable();
             $table->geometry('geom')->nullable();
         });

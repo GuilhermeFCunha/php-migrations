@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('deforestation', function (Blueprint $table) {
             $table->integer('id')->primary();
             $table->integer('process_id')->nullable();
-            $table->decimal('area_overlap', 10, 0)->nullable();
-            $table->decimal('area_total', 10, 0)->nullable();
+            $table->decimal('area_overlap', 10, 2)->nullable();
+            $table->decimal('area_total', 10, 2)->nullable();
             $table->string('year', 4)->nullable();
-            $table->geometry('geom')->nullable();
             $table->string('source')->nullable();
+            $table->geometry('geom')->nullable();
         });
     }
 

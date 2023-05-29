@@ -24,7 +24,7 @@ return new class extends Migration
             $table->decimal('mf', 10, 2)->nullable();
             $table->decimal('x', 10, 5)->nullable();
             $table->decimal('y', 10, 5)->nullable();
-            $table->integer('zona')->nullable();
+            $table->integer('zone')->nullable();
             $table->geometry('geom')->nullable();
         });
     }
