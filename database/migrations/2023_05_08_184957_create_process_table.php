@@ -31,7 +31,7 @@ return new class extends Migration
             $table->string('soil_types')->nullable();
             $table->decimal('burn_scars', 10, 0)->nullable();
             $table->decimal('rain_history', 10, 0)->nullable();
-            $table->string('biome')->nullable();
+            $table->string('biomes')->nullable();
             $table->timestamp('created_at')->nullable()->useCurrent();
         });
     }

@@ -38,7 +38,12 @@ class CarSeeder extends Seeder
                     'status_id'=>$user->status_id,
                     'state'=>$user->state,
                     'city'=>$user->city,
-                    'city_ibge'=>$user->city_ibge
+                    'city_ibge'=>$user->city_ibge,
+                    'mf'=>$user->mf,
+                    'x'=>$user->x,
+                    'y'=>$user->y,
+                    'zona'=>$user->zona,
+                    'geom'=>$user->geom
                 ];
 
                 if (count($insertData) === $batchSize) {

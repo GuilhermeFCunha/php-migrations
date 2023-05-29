@@ -16,14 +16,16 @@ return new class extends Migration
         Schema::create('car', function (Blueprint $table) {
             $table->integer('id')->primary();
             $table->string('code')->unique('car_code_key');
-            $table->decimal('area', 10, 0)->nullable();
+            $table->decimal('area', 10, 2)->nullable();
             $table->integer('status_id')->nullable();
             $table->string('state')->nullable();
             $table->string('city')->nullable();
             $table->integer('city_ibge')->nullable();
-            $table->geometry('geom')->nullable();
+            $table->decimal('mf', 10, 2)->nullable();
+            $table->decimal('x', 10, 5)->nullable();
+            $table->decimal('y', 10, 5)->nullable();
             $table->integer('zona')->nullable();
-            $table->integer('process_id')->nullable();
+            $table->geometry('geom')->nullable();
         });
     }
 

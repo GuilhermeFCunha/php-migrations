@@ -34,9 +34,11 @@ class DeforestationSeeder extends Seeder
                 $insertData[] = [
                     'id' => $user->id,
                     'process_id'=>$user->process_id,
-                    'area'=>$user->area,
+                    'area_overlap'=>$user->area_overlap,
+                    'area_total'=>$user->area_total,
                     'year'=>$user->year,
-                    'geom'=>$user->geom
+                    'geom'=>$user->geom,
+                    'source'=>$user->source
                 ];
 
                 if (count($insertData) === $batchSize) {

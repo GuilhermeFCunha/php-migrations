@@ -49,7 +49,7 @@ class ProcessSeeder extends Seeder
                     'soil_types'=>$user->soil_types,
                     'burn_scars'=>$user->burn_scars,
                     'rain_history'=>$user->rain_history,
-                    'biome'=>$user->biome,
+                    'biomes'=>$user->biome,
                     'created_at'=>$user->created_at
 
                 ];
