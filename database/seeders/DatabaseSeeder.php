@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             BurnScarsSeeder::class,
             CarSeeder::class,
             CarStatusSeeder::class,
+            CarbonSeeder::class,
             DeforestationSeeder::class,
             HeatFireSeeder::class,
             LandUseClassificationSeeder::class,
