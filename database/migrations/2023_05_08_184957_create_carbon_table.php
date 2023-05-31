@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('id')->primary();
             $table->integer('process_id')->nullable();
         });
-        DB::statement("ALTER TABLE land_use_classification ADD rast raster DEFAULT NULL");
+        DB::statement("ALTER TABLE carbon ADD rast raster DEFAULT NULL");
     }
 
     /**
