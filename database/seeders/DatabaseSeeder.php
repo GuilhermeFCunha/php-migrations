@@ -23,7 +23,9 @@ class DatabaseSeeder extends Seeder
             RestrictAreaSeeder::class,
             RestrictAreaDocumentSeeder::class,
             BiomesSeeder::class,
-            SoilsSeeder::class
+            SoilsSeeder::class,
+            ConservationUnitSeeder::class,
+            IndigenousLandSeeder::class
         ]);
     }
 }
