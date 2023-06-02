@@ -14,11 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('deforestation', function (Blueprint $table) {
-            $table->integer('id')->primary();
+            $table->increments('id');
             $table->integer('process_id')->nullable();
             $table->decimal('area_overlap', 10, 2)->nullable();
             $table->decimal('area_total', 10, 2)->nullable();
-            $table->integer('year', 4)->nullable();
+            $table->year('year')->nullable();
             $table->string('source')->nullable();
             $table->geometry('geom')->nullable();
         });
