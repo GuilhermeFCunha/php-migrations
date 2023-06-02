@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('status', 30)->nullable();
             $table->decimal('area_overlap', 10, 2)->nullable();
             $table->decimal('area_total', 10, 2)->nullable();
-            $table->string('year', 4)->nullable();
+            $table->integer('year', 4)->nullable();
             $table->string('source', 30)->nullable();
             $table->string('description', 255)->nullable();
             $table->geometry('geom')->nullable();

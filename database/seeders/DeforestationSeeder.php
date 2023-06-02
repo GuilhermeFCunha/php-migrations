@@ -10,46 +10,14 @@ class DeforestationSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     *
+     * @return void
      */
-    public function run(): void
+    public function run()
     {
-        $chunkSize = 500; // Number of chunks to process at a time
-        $batchSize = 100; // Number of records to insert at a time
+        $command = 'pg_restore -d postgres -U postgres --schema=public /home/guilherme/Documents/prodes_dump.sql';
 
-        $totalRecords = DB::connection('pgsql2')->table('deforestation')->count();
-        $totalChunks = ceil($totalRecords / $chunkSize);
-
-        for ($i = 0; $i < $totalChunks; $i++) {
-            $offset = $i * $chunkSize;
-
-            $chunk = DB::connection('pgsql2')->table('deforestation')
-                ->orderBy('id')
-                ->offset($offset)
-                ->limit($chunkSize)
-                ->get();
-
-            $insertData = [];
-
-            foreach ($chunk as $user) {
-                $insertData[] = [
-                    'id' => $user->id,
-                    'process_id'=>$user->process_id,
-                    'area_overlap'=>$user->area_overlap,
-                    'area_total'=>$user->area_total,
-                    'year'=>$user->year,
-                    'source'=>$user->source,
-                    'geom'=>$user->geom
-                ];
-
-                if (count($insertData) === $batchSize) {
-                    DB::connection('pgsql')->table('deforestation')->insert($insertData);
-                    $insertData = [];
-                }
-            }
-
-            if (count($insertData) > 0) {
-                DB::connection('pgsql')->table('deforestation')->insert($insertData);
-            }
-        }
+        // Execute the command
+        exec($command);
     }
 }

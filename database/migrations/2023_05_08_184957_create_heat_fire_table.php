@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('id')->primary();
             $table->integer('process_id')->nullable();
             $table->integer('total')->nullable();
-            $table->string('year', 4)->nullable();
+            $table->integer('year', 4)->nullable();
             $table->geometry('geom')->nullable();
         });
     }

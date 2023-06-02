@@ -12,21 +12,21 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            BurnScarsSeeder::class,
-            CarSeeder::class,
             CarStatusSeeder::class,
-            CarbonSeeder::class,
-            DeforestationSeeder::class,
-            HeatFireSeeder::class,
-            LandUseClassificationSeeder::class,
-            ProcessSeeder::class,
-            RainHistorySeeder::class,
-            RestrictAreaSeeder::class,
-            RestrictAreaDocumentSeeder::class,
-            BiomesSeeder::class,
-            SoilsSeeder::class,
-            ConservationUnitSeeder::class,
-            IndigenousLandSeeder::class
+            CarSeeder::class
+            // ProcessSeeder::class,
+            // DeforestationSeeder::class,
+            // CarbonSeeder::class,
+            // BurnScarsSeeder::class,
+            // HeatFireSeeder::class,
+            // LandUseClassificationSeeder::class,
+            // RainHistorySeeder::class,
+            // RestrictAreaSeeder::class,
+            // RestrictAreaDocumentSeeder::class,
+            // BiomesSeeder::class,
+            // SoilsSeeder::class,
+            // ConservationUnitSeeder::class,
+            // IndigenousLandSeeder::class
         ]);
     }
 }

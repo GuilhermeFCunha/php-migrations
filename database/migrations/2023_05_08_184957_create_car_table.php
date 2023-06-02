@@ -21,11 +21,13 @@ return new class extends Migration
             $table->string('state')->nullable();
             $table->string('city')->nullable();
             $table->integer('city_ibge')->nullable();
+            $table->integer('process_id')->nullable();
             $table->decimal('mf', 10, 2)->nullable();
             $table->decimal('x', 10, 5)->nullable();
             $table->decimal('y', 10, 5)->nullable();
             $table->integer('zone')->nullable();
             $table->geometry('geom')->nullable();
+            $table->date('creation_date')->nullable();
         });
     }
 

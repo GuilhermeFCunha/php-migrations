@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('document', 18)->nullable();
             $table->string('process_t')->nullable();
             $table->string('status', 30)->nullable();
-            $table->string('year', 4)->nullable();
+            $table->integer('year', 4)->nullable();
             $table->string('state')->nullable();
             $table->string('city')->nullable();
         });

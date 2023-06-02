@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('indigenous_land', function (Blueprint $table) {
             $table->integer('id')->primary();
             $table->integer('process_id')->nullable();
-            $table->string('name', 200)->nullable();
-            $table->string('ethnicity', 200)->nullable();
-            $table->string('modality', 200)->nullable();
+            $table->string('name', 255)->nullable();
+            $table->string('ethnicity', 255)->nullable();
+            $table->string('modality', 255)->nullable();
             $table->decimal('area', 10, 2)->nullable();
             $table->geometry('geom')->nullable();
         });
