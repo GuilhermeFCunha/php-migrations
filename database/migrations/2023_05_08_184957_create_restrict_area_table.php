@@ -25,6 +25,7 @@ return new class extends Migration
             $table->year('year')->nullable();
             $table->string('source', 30)->nullable();
             $table->string('description', 255)->nullable();
+            $table->string('property', 255)->nullable();
             $table->geometry('geom')->nullable();
         });
     }

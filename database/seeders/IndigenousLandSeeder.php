@@ -13,19 +13,9 @@ class IndigenousLandSeeder extends Seeder
      */
     public function run(): void
     {
-        $old_user = DB::connection('pgsql2')->table('indigenous_land')->get();
+        $command = 'pg_restore -d ppc_db_new -U postgres  /home/guilherme/Documents/Dump/Public_Dump/indigenousland_dump.sql';
 
-        // dd($old_user);
-        foreach ($old_user as $user) {
-            DB::connection('pgsql')->table('indigenous_land')->insert([
-                'id'     => $user->id,
-                'process_id'      =>$user->process_id,
-                'name'      =>$user->name,
-                'ethinicity'      =>$user->ethinicity,
-                'modality'      =>$user->modality,
-                'area'      =>$user->area,
-                'geom'      =>$user->geom
-            ]);
-}
+        // Execute the command
+        exec($command);
     }
 }

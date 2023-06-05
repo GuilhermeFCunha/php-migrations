@@ -15,7 +15,7 @@ class DeforestationSeeder extends Seeder
      */
     public function run()
     {
-        $command = 'pg_restore -d postgres -U postgres --schema=public /home/guilherme/Documents/prodes_dump.sql';
+        $command = 'pg_restore -d ppc_db_new -U postgres  /home/guilherme/Documents/Dump/Public_Dump/deforestation_dump.sql';
 
         // Execute the command
         exec($command);

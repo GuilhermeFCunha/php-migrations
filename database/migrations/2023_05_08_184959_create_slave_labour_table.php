@@ -17,12 +17,12 @@ return new class extends Migration
             $table->integer('id')->primary();
             $table->string('name')->nullable();
             $table->string('farm')->nullable();
-            $table->string('state', 4)->nullable();
+            $table->string('state', 2)->nullable();
             $table->string('document', 14)->nullable();
             $table->string('process_t')->nullable();
             $table->string('workers_involved', 4)->nullable();
             $table->string('status', 30)->nullable();
-            $table->string('year', 4)->nullable();
+            $table->year('year')->nullable();
             $table->date('inclusion_date')->nullable();
         });
     }

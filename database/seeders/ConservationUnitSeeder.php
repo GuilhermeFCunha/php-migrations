@@ -13,20 +13,9 @@ class ConservationUnitSeeder extends Seeder
      */
     public function run(): void
     {
-        $old_user = DB::connection('pgsql2')->table('conservation_unit')->get();
+        $command = 'pg_restore -d ppc_db_new -U postgres  /home/guilherme/Documents/Dump/Public_Dump/conservationunit_dump.sql';
 
-        // dd($old_user);
-        foreach ($old_user as $user) {
-            DB::connection('pgsql')->table('conservation_unit')->insert([
-                'id'     => $user->id,
-                'process_id'      =>$user->process_id,
-                'name'      =>$user->name,
-                'category'      =>$user->category,
-                'scope'      =>$user->scope,
-                'creation_date'      =>$user->creation_date,
-                'area'      =>$user->area,
-                'geom'      =>$user->geom
-            ]);
-}
+        // Execute the command
+        exec($command);
     }
 }

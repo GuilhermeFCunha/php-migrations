@@ -13,17 +13,9 @@ class RainHistorySeeder extends Seeder
      */
     public function run(): void
     {
-        $old_user = DB::connection('pgsql2')->table('rain_history')->get();
+        $command = 'pg_restore -d ppc_db_new -U postgres  /home/guilherme/Documents/Dump/Public_Dump/rainhistory_dump.sql';
 
-        // dd($old_user);
-        foreach ($old_user as $user) {
-            DB::connection('pgsql')->table('rain_history')->insert([
-                'id'     => $user->id,
-                'process_id'      =>$user->process_id,
-                'total'      =>$user->total,
-                'year'      =>$user->year,
-                'geom'      =>$user->geom
-            ]);
-}
+        // Execute the command
+        exec($command);
     }
 }

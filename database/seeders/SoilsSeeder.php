@@ -13,17 +13,9 @@ class SoilsSeeder extends Seeder
      */
     public function run(): void
     {
-        $old_user = DB::connection('pgsql2')->table('soils')->get();
+        $command = 'pg_restore -d ppc_db_new -U postgres  /home/guilherme/Documents/Dump/Public_Dump/soils_dump.sql';
 
-        // dd($old_user);
-        foreach ($old_user as $user) {
-            DB::connection('pgsql')->table('soils')->insert([
-                'id'     => $user->id,
-                'process_id'      =>$user->process_id,
-                'area'      =>$user->area,
-                'soil'      =>$user->year,
-                'geom'      =>$user->geom
-            ]);
-}
+        // Execute the command
+        exec($command);
     }
 }

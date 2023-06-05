@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             // BurnScarsSeeder::class,
             // HeatFireSeeder::class,
             // LandUseClassificationSeeder::class,
+            // LandUseLegendSeeder::class,
             // RainHistorySeeder::class,
             // RestrictAreaSeeder::class,
             // RestrictAreaDocumentSeeder::class,
