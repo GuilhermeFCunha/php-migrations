@@ -19,7 +19,7 @@ return new class extends Migration
             $table->boolean('car_overlap')->nullable();
             $table->decimal('car_overlap_area', 10, 2)->nullable();
             $table->boolean('deforestation')->nullable();
-            $table->decimal('desflorestation_area_since_2008', 10, 2)->nullable();
+            $table->decimal('deforestation_area_since_2008', 10, 2)->nullable();
             $table->boolean('restrict_area')->nullable();
             $table->string('restrict_area_year', 4)->nullable();
             $table->decimal('restrict_area_area', 10, 2)->nullable();
@@ -27,12 +27,13 @@ return new class extends Migration
             $table->integer('heat_fire_total')->nullable();
             $table->boolean('indigenous_land')->nullable();
             $table->boolean('conservation_unit')->nullable();
-            $table->decimal('carbon_area', 10, 2)->nullable();
+            $table->decimal('carbon_area', 14, 2)->nullable();
             $table->string('soil_types')->nullable();
             $table->decimal('burn_scars', 10, 2)->nullable();
             $table->decimal('rain_history', 10, 2)->nullable();
             $table->string('biomes')->nullable();
             $table->timestamp('created_at')->nullable()->useCurrent();
+            $table->text('limite_map')->nullable();
         });
     }
 

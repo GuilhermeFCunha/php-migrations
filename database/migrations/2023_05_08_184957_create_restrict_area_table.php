@@ -20,11 +20,13 @@ return new class extends Migration
             $table->string('document', 20)->nullable();
             $table->string('process_t')->nullable();
             $table->string('status', 30)->nullable();
-            $table->decimal('area_overlap', 10, 2)->nullable();
-            $table->decimal('area_total', 10, 2)->nullable();
+            $table->decimal('overlap_area', 10, 2)->nullable();
+            $table->decimal('total_area', 10, 2)->nullable();
             $table->year('year')->nullable();
             $table->string('source', 30)->nullable();
             $table->string('description', 255)->nullable();
+            $table->string('num_tad', 50)->nullable();
+            $table->string('data_tad', 30)->nullable();
             $table->string('property', 255)->nullable();
             $table->geometry('geom')->nullable();
         });

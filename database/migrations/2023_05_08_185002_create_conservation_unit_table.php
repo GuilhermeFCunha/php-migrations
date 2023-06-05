@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name', 255)->nullable();
             $table->string('category', 255)->nullable();
             $table->string('scope', 255)->nullable();
-            $table->date('creation_date')->nullable();
+            $table->year('creation_date')->nullable();
             $table->decimal('area', 10, 2)->nullable();
             $table->geometry('geom')->nullable();
         });

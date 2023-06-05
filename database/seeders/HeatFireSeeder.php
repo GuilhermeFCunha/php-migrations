@@ -13,7 +13,7 @@ class HeatFireSeeder extends Seeder
      */
     public function run(): void
     {
-        $command = 'pg_restore -d ppc_db_new -U postgres  /home/guilherme/Documents/Dump/Public_Dump/deforestation_dump.sql';
+        $command = 'pg_restore -d ppc_db_new -U postgres  /home/guilherme/Documents/Dump/Public_Dump/heatfire_dump.sql';
 
         // Execute the command
         exec($command);

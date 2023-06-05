@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('carbon', function (Blueprint $table) {
             $table->integer('id')->primary();
             $table->integer('process_id')->nullable();
+            $table->geometry('geom_invalid')->nullable();
         });
         DB::statement("ALTER TABLE carbon ADD rast raster DEFAULT NULL");
     }

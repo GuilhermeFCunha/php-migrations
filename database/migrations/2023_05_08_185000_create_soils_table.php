@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('id')->primary();
             $table->integer('process_id')->nullable();
             $table->decimal('area', 10, 2)->nullable();
-            $table->string('soil')->nullable();
+            $table->string('soil_type')->nullable();
             $table->geometry('geom')->nullable();
         });
     }

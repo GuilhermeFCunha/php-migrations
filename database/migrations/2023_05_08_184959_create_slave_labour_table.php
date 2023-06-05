@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('farm')->nullable();
             $table->string('state', 2)->nullable();
-            $table->string('document', 14)->nullable();
+            $table->string('document', 18)->nullable();
             $table->string('process_t')->nullable();
             $table->string('workers_involved', 4)->nullable();
             $table->string('status', 30)->nullable();
