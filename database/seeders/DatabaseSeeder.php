@@ -21,14 +21,14 @@ class DatabaseSeeder extends Seeder
             CarbonSeeder::class,
             BiomesSeeder::class,
             BurnScarsSeeder::class,
-            HeatFireSeeder::class,
-            LandUseLegendSeeder::class,
-            RainHistorySeeder::class,
-            RestrictAreaSeeder::class,
-            RestrictAreaDocumentSeeder::class,
             ConservationUnitSeeder::class,
+            HeatFireSeeder::class,
+            RestrictAreaSeeder::class,
             IndigenousLandSeeder::class,
-            SlaveLabourSeeder::class
+            RestrictAreaDocumentSeeder::class,
+            LandUseLegendSeeder::class,
+            SlaveLabourSeeder::class,
+            RainHistorySeeder::class
         ]);
     }
 }
