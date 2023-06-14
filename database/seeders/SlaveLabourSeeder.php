@@ -13,7 +13,7 @@ class SlaveLabourSeeder extends Seeder
      */
     public function run(): void
     {
-        $command = 'pg_restore -d ppc_db_new -U postgres  /home/guilherme/Documents/Dump/Public_Dump/slavelabour_dump.sql';
+        $command = 'pg_restore -d postgres -U postgres --schema=public  /home/diogo/Documentos/Banco_Geo/slavelabour_dump.sql';
 
         // Execute the command
         exec($command);
